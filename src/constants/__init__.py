@@ -4,7 +4,7 @@ import os
 AWS_S3_BUCKET_NAME = 'my-bucket'
 MONGO_DATABASE_NAME = 'Data'
 MONGO_COLLECTION_NAME = 'wafers_fault'
-
+TARGET_COLUMN = 'Quality'
 
 TARGET_COLUMN = 'target'
 
