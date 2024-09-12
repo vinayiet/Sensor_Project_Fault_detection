@@ -4,7 +4,8 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import RobustScaler, FunctionTransformer, StandardScaler
-
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline
 from src.constants import *
 from src.exceptions import CustomException
 from src.utils import MainUtils
