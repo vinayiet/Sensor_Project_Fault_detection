@@ -6,7 +6,7 @@ import pickle
 import yaml
 import boto3
 
-from src.contants import *
+from src.constants import *
 from src.exceptions import CustomException
 from src.logger import logging
 

@@ -1,19 +1,22 @@
-# A logging is crucial for tracking events that happens when application run which helps in debugging and monitoring the application behavior.
-
 import logging
 import os
 from datetime import datetime
 
+# Log file in a directory outside of OneDrive to avoid permission issues
+logs_path = os.path.join('C:\\', 'logs')  
 log_file = f"{datetime.now().strftime('%Y-%m-%d')}.log"
-logs_path = os.path.join(os.getcwd(), 'logs', log_file)
 
+# Ensure the directory exists
+os.makedirs(logs_path, exist_ok=True)
 
-os.makedirs(logs_path,exist_ok=True)
+# Set the full log file path
+log_file_path = os.path.join(logs_path, log_file)
 
-Log_file_path = os.path.join(logs_path, log_file)
-
+# Configure the logger
 logging.basicConfig(
-    filename=Log_file_path,
+    filename=log_file_path,
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
+
+logger = logging.getLogger(__name__)
