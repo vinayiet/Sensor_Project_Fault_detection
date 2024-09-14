@@ -9,6 +9,8 @@ from flask import request
 from src.constants import *
 from src.utils.main_utils import MainUtils
 from dataclasses import dataclass
+from src.constants import artifact_folder
+
 
 @dataclass
 class PredictionPipelineConfig:
